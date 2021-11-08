@@ -6,7 +6,7 @@ RUN apt update && \
   build-essential libffi-dev libmysqlclient-dev libxml2-dev libxslt-dev libjpeg-dev libssl-dev
 ENV LC_ALL en_US.UTF-8
 
-ARG DISCOVERY_REPOSITORY=https://github.com/edx/course-discovery.git
+ARG DISCOVERY_REPOSITORY=https://github.com/hocndh-1784/course-discovery.git
 ARG DISCOVERY_VERSION={{ OPENEDX_COMMON_VERSION }}
 RUN mkdir -p /openedx/discovery && \
     git clone $DISCOVERY_REPOSITORY --branch $DISCOVERY_VERSION --depth 1 /openedx/discovery
